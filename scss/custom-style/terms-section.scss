@@ -1,0 +1,71 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+.terms-of-program {
+  background: url("../../img/bg-aplication.webp") no-repeat bottom center;
+  background-size: contain;
+}
+@-webkit-keyframes linear-bg {
+  0% {
+    background: #dadaec;
+  }
+  100% {
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(22, 50, 96, 1)),
+      to(rgba(85, 171, 210, 1))
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(22, 50, 96, 1) 0%,
+      rgba(85, 171, 210, 1) 100%
+    );
+    color: #fff;
+  }
+}
+@keyframes linear-bg {
+  0% {
+    background: #dadaec;
+  }
+  100% {
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(22, 50, 96, 1)),
+      to(rgba(85, 171, 210, 1))
+    );
+    background: -o-linear-gradient(
+      bottom,
+      rgba(22, 50, 96, 1) 0%,
+      rgba(85, 171, 210, 1) 100%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(22, 50, 96, 1) 0%,
+      rgba(85, 171, 210, 1) 100%
+    );
+    color: #fff;
+  }
+}
+.custom_counter {
+  margin-top: 40px;
+  text-align: right;
+  color: $green-color;
+  li {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .custom_counter {
+    margin-top: 24px;
+  }
+  .terms-of-program .row div:first-child .terms1 {
+    margin-bottom: 30px;
+  }
+}

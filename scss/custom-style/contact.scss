@@ -1,0 +1,107 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+.customer {
+  text-align: center;
+  h2 {
+    color: $babyblue-color;
+    margin: 0 auto 30px auto;
+  }
+  .effect_an {
+    margin: 0 auto;
+    font-size: 19px;
+    &::after {
+      background-color: $blue-color;
+      border-color: $blue-color;
+    }
+    &::before {
+      background-color: $orange-color;
+      border-color: $orange-color;
+    }
+    &:hover , &:focus{
+      background-color: $orange-color;
+    }
+  }
+}
+/****************************/
+.calling {
+  margin-top: 100px;
+  .row {
+    @include flex-col-center;
+  }
+}
+.tawasal {
+  color: $babyblue-color;
+  text-align: right;
+}
+.box1 {
+  @include dis-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px 6px;
+  border-bottom: 2px solid #efefef;
+  @include rTransition(all 0.25s ease-in-out);
+  position: relative;
+  &::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    @include absolute;
+    width: 0;
+    border-bottom: 2px solid $babyblue-color;
+    @include rTransition(all 0.25s ease-in-out);
+  }
+  &:hover {
+    border-color: transparent;
+    &::before {
+      width: 100%;
+    }
+    .box_i {
+      @include rTransform(translateY(-10px));
+    }
+  }
+}
+.box_body {
+  width: calc(100% - 60px);
+  padding-left: 10px;
+  text-align: center;
+  a {
+    font-size: 18px;
+    display: block;
+  }
+}
+.box_i {
+  width: 60px;
+  height: 60px;
+  @include flex-center;
+  font-size: 40px;
+  border-radius: 8px;
+  background-color: $babyblue-color;
+  @include rTransition(transform 0.25s ease-in-out);
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .tawasal {
+    text-align: center;
+    margin: 0 auto 15px auto;
+  }
+  .box_body a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .calling {
+    margin-top: 50px;
+    .row > div:last-of-type .box1 {
+      margin-top: 15px;
+    }
+  }
+  .customer h2 {
+    font-size: 24px;
+    line-height: 1.6;
+}
+}

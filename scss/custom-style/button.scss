@@ -1,0 +1,125 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+/********************** start my button **************/
+.effect_an {
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  padding: 0;
+  text-transform: uppercase;
+  position: relative;
+  @include rTransition(all 0.5s ease-in-out);
+  border-radius: 40px;
+  font-family: "Almarai-Bold";
+  text-align: center;
+  color: #fff;
+  border: 0;
+  div{
+    position: relative;
+  z-index: 3;
+  height: 40px;
+  line-height: 40px;
+  @include flex-center;
+  }
+  &::before,
+  &::after {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  @include rTransition(all 0.5s ease-in-out);
+  }
+  &::before {
+    @include rTransform(scaleY(1));
+  background-color: $babyblue-color;
+  border: 2px solid $babyblue-color;
+  }
+  &::after {
+    @include rTransform(scaleX(1.1));
+  background-color: #FBFBFB;
+  border: 2px solid #FBFBFB;
+  }
+  &:hover,
+  &:focus {
+    color: #ffffff !important;
+    background-color: $babyblue-color;
+    &::before {
+      @include rTransform(scaleY(0));
+    }
+    &::after {
+      @include rTransform(scaleX(0));
+    }
+  }
+}
+/********************** end my button **************/
+/************************/
+.social li {
+  display: inline-block !important;
+  line-height: 1 !important;
+  margin-left: 6px;
+  &:last-child {
+    margin: 0;
+  }
+  a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    @include flex-center();
+    font-size: 18px;
+    background-color: transparent;
+    position: relative;
+    @include rTransition(all 0.5s ease-in-out);
+    z-index: 1;
+    @extend %bold;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      @include rTransition(all 0.5s ease-in-out);
+      @include rTransform(scale(0));
+      z-index: -1;
+    }
+    &:hover,
+    &:focus {
+      color: #fff !important;
+      &::before {
+        @include rTransform(scale(1.1));
+      }
+    }
+    &.icon-f:before {
+      background-color: #3b5999;
+    }
+    &.icon-tw:before {
+      background-color: #55acee;
+    }
+    &.icon-ig:before {
+      background-color: #bd0095;
+    }
+    &.icon-g:before {
+      background-color: #dd4b39;
+    }
+    &.icon-in:before {
+      background-color: #187bb4;
+    }
+    &.icon-y:before {
+      background-color: #c12816;
+    }
+    &.icon-snap:before {
+      background-color: #fffc00;
+    }
+    &.icon-whats:before {
+      background-color: #499c15;
+    }
+  }
+}

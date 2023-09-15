@@ -1,0 +1,43 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+.custom_tooltip {
+  position: relative;
+  .tooltip_txt {
+    @include absolute;
+    position: absolute;
+    bottom: calc(100% + 22px);
+    background-color: #def8b1;
+    border: 2px solid #659e2b;
+    border-radius: 8px;
+    color: #659e2b;
+    padding: 10px;
+    text-transform: capitalize;
+    min-width: 200px;
+    display: none;
+    &.hidee{
+      display: none !important;
+    }
+    .remov {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #659e2b;
+    }
+    &::before {
+      content: "▼";
+      position: absolute;
+      bottom: -8px;
+      z-index: 1;
+      text-align: center;
+      width: 26px;
+      height: 16px;
+      color: #659e2b;
+      @include absolute;
+      font-size: 23px;
+    }
+  }
+}
